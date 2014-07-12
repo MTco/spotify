@@ -1,9 +1,10 @@
 module.exports = function(grunt) {
         grunt.initConfig({
                 nodewebkit: {
-                        src: "./**/*",
+												src: "./package.json",
                         options: {
                                 build_dir: "./build",
+																keep_nw: true,
                                 win: false,
                                 mac: false,
                                 linux32: true,
@@ -14,10 +15,7 @@ module.exports = function(grunt) {
         grunt.loadNpmTasks("grunt-node-webkit-builder");
         grunt.registerTask(
                 "build",
-                function() {
-                        require("child_process").exec("rm -rf ./build");
-                        grunt.task.run("nodewebkit");
-                }
+								"nodewebkit"
         );
         grunt.registerTask(
                 "default",

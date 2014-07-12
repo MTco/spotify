@@ -13,6 +13,9 @@
     "width": 1024,
     "height": 640
   },
+	"webkit": {
+		"plugin": true
+	},
   "author": "Mattias Erming",
   "license": "MIT",
   "devDependencies": {
