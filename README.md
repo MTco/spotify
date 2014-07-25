@@ -1,56 +1,36 @@
-Spotify Web-Desktop App
-=======================
+# Spotify Web App
 
-A script to make a pop-out desktop app of Spotify's web app.  Useful for Linux if the preview is not functioning as expected.
+This is a node-webkit application serving http://play.spotify.com/.
 
-Created using node-webkit and grunt.
+## Install
 
-Install
-=======
+You've got two options:
 
-### Dependencies:
+	1. Download one of the builds from [releases](https://github.com/erming/spotify/releases)
+	2. Build it yourself
 
-Install npm (if you don't already have it)
+### Building the application
 
-`sudo apt-get install npm`
+1. Install Node.js and npm
+`sudo apt-get install nodejs-legacy npm`
 
-Install nodejs (if you don't already have it)
+2. Install [Grunt](http://gruntjs.com/)
+`sudo npm -g install grunt-cli`
 
-`sudo apt-get install nodejs-legacy`
+3. Clone the project from GitHub
+`git clone http://github.com/erming/spotify`
 
-Install grunt-cli (if you don't already have it)
+4. Open folder
+`cd spotify/`
 
-`sudo npm install -g grunt-cli`
+5. Install packages
+`sudo npm install`
 
-### Clone repo:
+6. (optional) Open `Gruntfile.js` and edit the build targets
 
-Navigate to desired directory (I chose Documents)
+7. Build (this step may take a while..)
+`grunt build`
 
-`git clone https://github.com/erming/spotify.git`
+## License
 
-### Run install.sh:
-
-`cd spotify`
-
-`chmod a+x install.sh`
-
-`./install.sh`
-
-### Other
-
-You may need to set-up a symbolic link for libudev.so.0 like the 2nd response (http://www.askubuntu.com/questions/288821)[here].
-
-For me (Linux Mint), it was done with this command:
-
-`sudo ln -sf /lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libudev.so.0`
-
-Although your folder located at `/lib/_____-linux-gnu/libudev.so.1` may be different.
-
-### Desktop / Panel Icon
-
-Coming soon.  Directions may differ for each distro.
-
-License
-=======
-
-MIT
+Available under [the MIT license](http://mths.be/mit).
