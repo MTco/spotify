@@ -31,6 +31,13 @@ You've got two options:
 7. Build (this step may take a while..)  
 `grunt build`
 
+### Linux
+
+You might have to setup a symbolic link:  
+`sudo ln -sf /lib/$(arch)-linux-gnu/libudev.so.1 /lib/$(arch)-linux-gnu/libudev.so.0`
+
+([Link](http://askubuntu.com/questions/288821/#answer-288822))
+
 ## License
 
 Available under [the MIT license](http://mths.be/mit).
